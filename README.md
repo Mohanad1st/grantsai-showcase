@@ -1,8 +1,10 @@
-<p align="center"><img src="assets/banner.svg" alt="GrantsAI — Find, judge and draft grant applications faster, for small NGOs" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="GrantsAI" width="100%"></p>
 
-<p align="center"><b>Status:</b> In development &nbsp;·&nbsp; <b>Built by</b> <a href="https://github.com/Mohanad1st">Mohannad Hesham</a> &nbsp;·&nbsp; <b>Source:</b> private</p>
+<p align="center"><b>Find, judge and draft grant applications faster, for small NGOs</b></p>
 
-> **This is a showcase, not the code.** The source is private because it is a product in development. This page shows what it does and how it was built, not the code itself. A live walkthrough is available on request.
+<p align="center"><b>Status:</b> In development &nbsp;·&nbsp; <b>Built by</b> <a href="https://github.com/Mohanad1st">Mohannad Hesham</a></p>
+
+> Case study only: the source is private because it is a product in development. Walkthrough on request.
 
 ## The problem
 
@@ -20,13 +22,15 @@ Small NGOs lose funding not because their work is weak, but because finding the 
 How the work flows:
 
 ```mermaid
-flowchart LR
-  A[Grant link] --> B[Plain summary of requirements]
-  B --> C[Match score with reasons]
-  C -- weak fit --> Z[Set aside]
-  C -- good fit --> D[Tracked with deadline]
-  D --> E[First draft from your own documents]
-  E --> F{A person approves}
+flowchart TD
+  accTitle: How GrantsAI handles a grant
+  accDescr: A grant link is summarised, scored for fit with reasons, weak fits are set aside, good fits are tracked with a deadline, a first draft is written from your own documents, and a person approves before you submit.
+  A[Grant link] --> B[Summary]
+  B --> C{Match score}
+  C -- weak --> Z[Set aside]
+  C -- good --> D[Tracked]
+  D --> E[First draft]
+  E --> F{Person approves}
   F --> G[You submit]
 ```
 
@@ -50,7 +54,7 @@ Next.js · TypeScript · Tailwind CSS · Python (FastAPI) · PostgreSQL with vec
 
 ## More independent builds
 
-- [FPL War Room](https://github.com/Mohanad1st/fpl-war-room-showcase) — Six YouTubers and five blogs replaced by one number-backed weekly decision
+- [FPL War Room](https://github.com/Mohanad1st/fpl-war-room-showcase) — Many opinions in, one number-backed weekly decision out
 
 ---
 
