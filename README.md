@@ -21,7 +21,7 @@ How the work flows:
 
 ```mermaid
 flowchart LR
-  A[Grant link or discovered call] --> B[Plain summary of requirements]
+  A[Grant link] --> B[Plain summary of requirements]
   B --> C[Match score with reasons]
   C -- weak fit --> Z[Set aside]
   C -- good fit --> D[Tracked with deadline]
@@ -48,7 +48,7 @@ Next.js · TypeScript · Tailwind CSS · Python (FastAPI) · PostgreSQL with vec
 
 - It does not submit applications. It helps people decide and draft; people send.
 
-## More from Independent builds
+## More independent builds
 
 - [FPL War Room](https://github.com/Mohanad1st/fpl-war-room-showcase) — Six YouTubers and five blogs replaced by one number-backed weekly decision
 
