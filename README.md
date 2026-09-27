@@ -4,53 +4,55 @@
 
 <p align="center"><b>Status:</b> In development &nbsp;·&nbsp; <b>Built by</b> <a href="https://github.com/Mohanad1st">Mohannad Hesham</a></p>
 
-> Case study only: the source is private because it is a product in development. Walkthrough on request.
+> This is a case study. The source is private because it is a product in development.
 
-## The problem
+## Why I built it
 
-Small NGOs lose funding not because their work is weak, but because finding the right grant, reading dense funder rules and writing a first draft takes more staff time than they have. GrantsAI is built for the people who do that work alongside everything else: it reads the call, tells them honestly whether it fits, and gets them to a first draft grounded in their own documents.
+Small NGOs spend more staff time than they have on finding the right grant, reading dense funder rules and writing a first draft. GrantsAI reads the call, tells you whether it fits and why, and gets you to a first draft built on your own documents.
 
 ## What it does
 
-- Paste a grant link and get a plain summary of its requirements, funding type and eligibility
-- A match score against your organisation's profile, with the reasons it fits or doesn't
-- Track saved grants with status, deadlines, tags and reminders
-- Generate a first-draft proposal from your organisation profile and your own past documents
+- Paste a grant link and get a plain summary of its requirements, funding type and eligibility.
+- A match score against your organisation's profile, with the reasons.
+- Saved grants with status, deadlines, tags and reminders.
+- A first-draft proposal from your organisation profile and your own past documents.
 
-## See it
-
-How the work flows:
+## How it works
 
 ```mermaid
 flowchart TD
   accTitle: How GrantsAI handles a grant
-  accDescr: A grant link is summarised, scored for fit with reasons, weak fits are set aside, good fits are tracked with a deadline, a first draft is written from your own documents, and a person approves before you submit.
+  accDescr: A grant link is summarised and scored for fit with reasons; grants you keep are tracked with a deadline, a first draft is written from your own documents, and a person approves it before you submit.
   A[Grant link] --> B[Summary]
   B --> C{Match score}
-  C -- weak --> Z[Set aside]
-  C -- good --> D[Tracked]
+  C -- not a fit --> Z[Not saved]
+  C -- good fit --> D[Tracked]
   D --> E[First draft]
   E --> F{Person approves}
   F --> G[You submit]
 ```
 
-<sub>Screens will be added once demo data is loaded; the product is still in development.</sub>
+<sub>No screens yet; the product is still in development.</sub>
 
-## Built with
+## What it's built on
 
 Next.js · TypeScript · Tailwind CSS · Python (FastAPI) · PostgreSQL with vector search · LLM APIs
 
-## Built responsibly
+## Safeguards
 
-- Nothing AI-discovered enters the shared pool until a person reviews it
-- A person approves a drafted proposal before it is treated as final
-- When an admin corrects AI-extracted grant data, the correction wins over future AI updates
-- Every AI call is metered, so spend is visible
-- An automated test suite runs on every change
+- Nothing the AI discovers reaches the shared pool until a person reviews it.
+- A person approves a drafted proposal before it counts as final.
+- When an admin corrects AI-extracted grant data, the correction wins over later AI updates.
+- Every AI call is metered, so spend is visible.
+- Automated tests run on every push and pull request to the main branch.
 
-## What it deliberately doesn't do
+## What's not solved yet
 
-- It does not submit applications. It helps people decide and draft; people send.
+- A security review found issues that must be fixed before any launch. The automatic weekly grant discovery is built but currently failing.
+
+## What it doesn't do
+
+- It doesn't submit applications. It helps you decide and draft; you send.
 
 ---
 
