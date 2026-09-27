@@ -52,10 +52,6 @@ Next.js · TypeScript · Tailwind CSS · Python (FastAPI) · PostgreSQL with vec
 
 - It does not submit applications. It helps people decide and draft; people send.
 
-## More independent builds
-
-- [FPL War Room](https://github.com/Mohanad1st/fpl-war-room-showcase) — Many opinions in, one number-backed weekly decision out
-
 ---
 
 <sub>© 2026 Mohannad Hesham. Showcase text and images only — no source code is published or licensed here. See all my work on <a href="https://github.com/Mohanad1st">my GitHub profile</a> · <a href="https://www.linkedin.com/in/mohannadhesham/">LinkedIn</a>.</sub>
